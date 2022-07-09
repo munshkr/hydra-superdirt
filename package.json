@@ -1,0 +1,10 @@
+{
+  "name": "superdirt-ws",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Damián Silvani <munshkr@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "osc-js": "^2.3.2"
+  }
+}
