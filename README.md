@@ -34,8 +34,8 @@ On Hydra:
 loadScript("https://unpkg.com/osc-js")
 
 // Create rms() function to read RMS from OSC-WS bridge
-if (!window.init) {
-  window.init = true
+if (!_rmsLoaded) {
+  _rmsLoaded = true
   _rms = {}
   oscSrv = new OSC();
   oscSrv.on('/rms', msg => {
