@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Damián Silvani <munshkr@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "osc-js": "^2.3.2"
   }
