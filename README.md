@@ -1,11 +1,17 @@
 # superdirt-ws
 
-This is a very simple OSC-WebSocket bridge application written in Node (using [osc-js](https://github.com/adzialocha/osc-js)), as an example to send the RMS events from [SuperDirt](https://github.com/musikinformatik/SuperDirt) to use them on [Hydra](https://hydra.ojack.xyz/).
+A Hydra extension for handling SuperDirt RMS events (envelope follower)
+
+This repository contains the source code of a [Hydra](https://hydra.ojack.xyz/)
+extension that handles RMS messages sent by
+[SuperDirt](https://github.com/musikinformatik/SuperDirt), and an OSC-WebSocket
+bridge application that forwards OSC messages to the browser.
 
 
 ## Install
 
-You need to install [Node](https://nodejs.org/en/).  Then, clone the repository, and from within the cloned directory run `npm install`.
+You need to install [Node](https://nodejs.org/en/).  Then, clone the
+repository, and from within the cloned directory run `npm install`.
 
 
 ## Usage
@@ -38,7 +44,8 @@ OSCFunc({ |msg|
 ~dirt.stopSendRMS;
 ```
 
-Then, run `npm start` to start the bridge, which will start a WebSockets server at 8080 and open a UDP port on 9130.
+Then, run `npm start` to start the bridge, which will start a WebSockets server
+at 8080 and open a UDP port on 9130.
 
 On Hydra:
 
@@ -71,3 +78,15 @@ oscSrv.open();
 // On hydra, for instance:
 solid(() => rms(0)).out()
 ```
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at the [issues
+page](https://github.com/munshkr/hydra-superdirt). This project is intended to
+be a safe, welcoming space for collaboration, and contributors are expected to
+adhere to the [Contributor Covenant](http://contributor-covenant.org) code of
+conduct.
+
+## License
+
+This project is licensed under GPL 3+. Refer to [LICENSE.txt](LICENSE.txt)
