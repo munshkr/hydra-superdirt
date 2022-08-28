@@ -39,45 +39,38 @@ OSCFunc({ |msg|
 	b.sendMsg("/rms", *msg);
 }, "/rms");
 )
+```
 
-// You can stop sending RMS events with:
+You can stop sending RMS events with:
+
+```
 ~dirt.stopSendRMS;
 ```
 
 Then, run `npm start` to start the bridge, which will start a WebSockets server
 at 8080 and open a UDP port on 9130.
 
-On Hydra:
+On Hydra, execute first:
 
 ```js
 // Load osc-js script
-loadScript("https://unpkg.com/osc-js")
+loadScript("https://unpkg.com/hydra-superdirt")
+```
 
-// Create rms() function to read RMS from OSC-WS bridge
-if (!window._rmsLoaded) {
-  _rmsLoaded = true
-  _rms = {}
-  oscSrv = new OSC();
-  oscSrv.on('/rms', msg => {
-    console.debug("RMS:", msg.args)
-    const orbit = msg.args[2]
-    _rms[orbit] = msg.args[3]
-  })
-  function rms(orbit) {
-    return _rms[orbit] || 0
-  }
-  console.log("RMS Ready")
-}
+Then, to connect:
 
-// Connect to WS server (port 8080 when not specified)
-oscSrv.open();
+```js
+oscConnect()
+```
 
-///
+Now you can try evaluating on Tidal something like: `d1 $ s "bd sd"`
+On hydra, for instance:
 
-// Try evaluating on Tidal something like: d1 $ s "bd sd"
-// On hydra, for instance:
+```js
 solid(() => rms(0)).out()
 ```
+
+You should see a red tint that fades to black every time the samples are played.
 
 ## Contributing
 

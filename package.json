@@ -6,7 +6,7 @@
   "author": "Damián Silvani <munshkr@gmail.com>",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "start": "node index.js"
+    "start": "node bridge.js"
   },
   "dependencies": {
     "osc-js": "^2.3.2"

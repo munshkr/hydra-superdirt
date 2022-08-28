@@ -1,20 +1,43 @@
-const OSC = require('osc-js')
+(async () => {
 
-const config = {
-    wsServer: { port: 8080 },
-    udpClient: { port: 9129 },
-    udpServer: { port: 9130 },
-}
-const osc = new OSC({ plugin: new OSC.BridgePlugin(config) })
+  let rms = {}
+  let rmsCallbacks = {}
 
-osc.on('/rms', message => {
-    console.log("RMS", message.args)
-})
+  window.rms = (orbit) => {
+    return rms[orbit] || 0
+  }
 
-osc.on('open', () => {
-    console.log("Port is open now.")
-    const message = new OSC.Message('/test', 12.221, 'hello')
-    osc.send(message)
-})
+  window.onRms = (callback, orbit) => {
+    rmsCallbacks[orbit] = callback
+  }
 
-osc.open()
+  //
+
+  await loadScript("https://unpkg.com/osc-js")
+  console.log("osc-js loaded")
+
+  let oscSrv = new OSC();
+
+  oscSrv.on('/rms', msg => {
+    console.debug("RMS:", msg.args)
+    const orbit = msg.args[2]
+    rms[orbit] = msg.args[3]
+  })
+
+  oscSrv.on('open', () => {
+    console.log("OSC-WS connection open")
+  })
+
+  oscSrv.on('close', () => {
+    console.log("OSC-WS connection closed")
+  })
+
+  window.oscConnect = (otherPort) => {
+    oscSrv.open({ port: otherPort || 8080 })
+  }
+
+  window.oscDisconnect = () => {
+    oscSrv.close()
+  }
+
+})();
