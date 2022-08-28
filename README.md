@@ -1,4 +1,4 @@
-# superdirt-ws
+# hydra-superdirt
 
 A Hydra extension for handling SuperDirt RMS events (envelope follower)
 
