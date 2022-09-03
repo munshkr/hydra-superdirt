@@ -5,8 +5,14 @@
   "main": "index.js",
   "author": "Damián Silvani <munshkr@gmail.com>",
   "license": "GPL-3.0-or-later",
+  "files": [
+    "bin/*"
+  ],
+  "bin": {
+    "hydra-sc-bridge": "./bin/hydra-sc-bridge.js"
+  },
   "scripts": {
-    "start": "node bridge.js"
+    "start": "node bin/hydra-sc-bridge.js"
   },
   "dependencies": {
     "osc-js": "^2.3.2"
