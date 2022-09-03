@@ -10,5 +10,8 @@
   },
   "dependencies": {
     "osc-js": "^2.3.2"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.0"
   }
 }
