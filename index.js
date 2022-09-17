@@ -8,7 +8,7 @@
   let rmsCallbacks = {}
 
   oscSrv.on('/rms', msg => {
-    console.debug("[hydra-superdirt] RMS:", msg.args)
+    // console.debug("[hydra-superdirt] RMS:", msg.args)
     const orbit = msg.args[2]
     rms[orbit] = msg.args[3]
     if (rmsCallbacks[orbit]) {
