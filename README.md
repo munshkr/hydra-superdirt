@@ -28,12 +28,6 @@ On SC, execute this:
 // Run this to start sending the RMS OSC messages to SC.
 ~dirt.startSendRMS;
 
-~dirt.orbits.collect { |orbit, i|
-	// Set default reply rate and peak lag
-	// (this can also be set on the event itself (i.e. Tidal)
-	orbit.defaultParentEvent.put(\rmsReplyRate, 8).put(\rmsPeakLag, 3);
-};
-
 // The bridge will be listening to OSC messages on port UDP 9130.
 b = NetAddr.new("127.0.0.1", 9130);
 
@@ -43,6 +37,14 @@ OSCFunc({ |msg|
 	b.sendMsg("/rms", *msg);
 }, "/rms");
 )
+```
+
+By default, the RMS reply rate (frequency of messages) and peak lag (how long it 
+takes for the peak values to drop to zero) are 20 and 3, but you can adjust them
+with `startSendRMS`:
+
+```c
+~dirt.startSendRMS(60, 0.4);
 ```
 
 You can stop sending RMS events with:
