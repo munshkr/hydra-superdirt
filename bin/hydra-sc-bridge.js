@@ -18,7 +18,7 @@ console.log(`hydra-superdirt ${packageInfo.version} - OSC-WebSocket bridge`)
 const osc = new OSC({
   plugin: new OSC.BridgePlugin({
     wsServer: { port: options.port },
-    udpServer: { port: options.oscPort },
+    udpServer: { port: options.oscPort, host: "0.0.0.0" },
   })
 })
 
