@@ -9,8 +9,7 @@ bridge application that forwards OSC messages to the browser.
 
 Watch demo:
 
-[![Simple demo](https://img.youtube.com/vi/i5JoCTLqGSw/0.jpg)](https://www.youtube.com/watch?v=i5JoCTLqGSw)
-
+[![demo](https://user-images.githubusercontent.com/4862/190862964-ca9eaa34-5782-4cb4-b3f7-87d461b0e685.gif)](https://www.youtube.com/watch?v=i5JoCTLqGSw)
 
 ## Install
 
