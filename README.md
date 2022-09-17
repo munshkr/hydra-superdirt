@@ -20,6 +20,7 @@ Start Supercollider and SuperDirt.
 On SC, execute this:
 
 ```c
+(
 // Run this to start sending the RMS OSC messages to SC.
 ~dirt.startSendRMS;
 
