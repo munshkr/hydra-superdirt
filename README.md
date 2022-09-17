@@ -7,6 +7,11 @@ extension that handles RMS messages sent by
 [SuperDirt](https://github.com/musikinformatik/SuperDirt), and an OSC-WebSocket
 bridge application that forwards OSC messages to the browser.
 
+Watch demo:
+
+[![Simple demo](https://img.youtube.com/vi/i5JoCTLqGSw/0.jpg)](https://www.youtube.com/watch?v=i5JoCTLqGSw)
+
+
 ## Install
 
 Download the latest binary file at
