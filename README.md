@@ -13,9 +13,27 @@ Watch demo:
 
 ## Install
 
+### Binaries
+
 Download the latest binary file at
 [Releases](https://github.com/munshkr/hydra-superdirt/releases) corresponding to
 your operating system (Linux, MacOs and Windows supported) and put it somewhere.
+
+### Install and Run Using Yarn
+
+Install [Yarn](https://yarnpkg.com )
+
+Clone repo somewhere
+
+Go to the repo folder on your terminal and run yarn
+```c
+yarn --start
+
+```
+Then run hydra-superdirt:
+```c
+yarn start
+```
 
 ## Usage
 
@@ -68,16 +86,33 @@ Then, to connect:
 ```js
 rmsConnect()
 ```
+Now, go to tidal and test with 
 
-Now you can try evaluating on Tidal something like: `d1 $ s "bd sd"`
+`d1 $ s "bd sd"`
 
-On Hydra, try this:
+Then on Hydra, try this:
 
 ```js
 solid(() => rms(0)).out()
 ```
 
 You should see a red tint that fades to black every time the samples are played.
+
+### Using more than one event.
+
+On tidal test something like this:
+
+```js
+d1 $ s $ "bd*8"
+d2 $ s $ "arpy*2"
+```
+Then on Hydra:
+```js
+shape(30,() => rms(0)).scrollX(()=>rms(1)).out()
+```
+You will see a circle scaling with the d1 pattern and then shifting to the left with d2.
+
+
 
 ### Functions
 
