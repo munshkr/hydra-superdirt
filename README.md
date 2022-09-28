@@ -25,9 +25,9 @@ Install [Yarn](https://yarnpkg.com )
 
 Clone repo somewhere
 
-Go to the repo folder on your terminal and run yarn
+Go to the repo folder on your terminal and run:
 ```c
-yarn --start
+yarn
 
 ```
 Then run hydra-superdirt:
