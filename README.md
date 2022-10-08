@@ -13,27 +13,18 @@ Watch demo:
 
 ## Install
 
-### Binaries
+### Bridge binaries
 
-Download the latest binary file at
+You will need to download and run a program that bridges between SuperCollider and
+the browser, forwarding OSC messages through WebSockets. This is necessary because
+browsers don't currently support the OSC protocol.
+
+Download the latest bridge binary file at
 [Releases](https://github.com/munshkr/hydra-superdirt/releases) corresponding to
-your operating system (Linux, MacOs and Windows supported) and put it somewhere.
+your operating system (Linux, MacOs and Windows supported) and put it somewhere accesible.
 
-### Install and Run Using Yarn
-
-Install [Yarn](https://yarnpkg.com )
-
-Clone repo somewhere
-
-Go to the repo folder on your terminal and run:
-```c
-yarn
-
-```
-Then run hydra-superdirt:
-```c
-yarn start
-```
+Alternatively, you can download the source code and run it there.
+See [Development](https://github.com/munshkr/hydra-superdirt#development) section below.
 
 ## Usage
 
