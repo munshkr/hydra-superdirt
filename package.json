@@ -1,7 +1,7 @@
 {
   "name": "hydra-superdirt",
   "description": "A Hydra extension for handling SuperDirt RMS events",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "main": "index.js",
   "author": "Damián Silvani <munshkr@gmail.com>",
   "license": "GPL-3.0-or-later",
