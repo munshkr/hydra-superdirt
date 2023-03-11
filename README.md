@@ -23,8 +23,11 @@ Download the latest bridge binary file at
 [Releases](https://github.com/munshkr/hydra-superdirt/releases) corresponding to
 your operating system (Linux, MacOs and Windows supported) and put it somewhere accesible.
 
-Alternatively, you can download the source code and run it there.
-See [Development](https://github.com/munshkr/hydra-superdirt#development) section below.
+Alternatively, if you have Node installed, you can run from a terminal:
+
+```
+npx hydra-superdirt
+```
 
 ## Usage
 
