@@ -1,6 +1,6 @@
 (async () => {
 
-  await loadScript("https://unpkg.com/osc-js")
+  await loadScript("https://unpkg.com/osc-js@2.4.0/lib/osc.min.js")
   console.log("[hydra-superdirt] osc-js loaded")
 
   let oscSrv = new OSC();
